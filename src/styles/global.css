@@ -1,0 +1,121 @@
+ :root {
+     --bg-primary: #0B1120;
+     --bg-secondary: #111C30;
+     --bg-card: #162238;
+     --accent: #38BDF8;
+     --accent-hover: #0EA5E9;
+     --text-primary: #F8FAFC;
+     --text-secondary: #A8B3C7;
+     --border-color: #26364F;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+     scroll-padding-top: 85px;
+ }
+
+ body {
+     background: var(--bg-primary);
+     color: var(--text-primary);
+     font-family: "Inter", "Segoe UI", sans-serif;
+     min-height: 100vh;
+     overflow-x: hidden;
+     overflow-y: auto;
+ }
+
+ #root,
+ .app {
+     min-height: 100vh;
+     position: relative;
+     isolation: isolate;
+ }
+
+ .main-content {
+     width: 100%;
+     position: relative;
+     z-index: 1;
+ }
+
+ section {
+     background-color: transparent;
+     color: var(--text-primary);
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     color: var(--text-primary);
+ }
+
+ p {
+     color: var(--text-secondary);
+ }
+
+ a {
+     color: var(--accent);
+     transition: color 0.3s ease;
+ }
+
+ a:hover {
+     color: var(--accent-hover);
+ }
+
+ button {
+     cursor: pointer;
+ }
+
+ /* =========================================
+   GLOBAL PORTFOLIO POLISH
+========================================= */
+
+ /* Smooth navigation and section positioning */
+ html {
+     scroll-behavior: smooth;
+     scroll-padding-top: 85px;
+ }
+
+ section {
+     scroll-margin-top: 75px;
+ }
+
+ /* Consistent text rendering */
+ body {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+
+ /* Prevent images from overflowing */
+ img {
+     max-width: 100%;
+ }
+
+ /* Better keyboard navigation */
+ a:focus-visible,
+ button:focus-visible,
+ input:focus-visible,
+ textarea:focus-visible {
+     outline: 2px solid var(--accent);
+     outline-offset: 4px;
+ }
+
+ /* Selection color */
+ ::selection {
+     background: var(--accent);
+     color: #082F49;
+ }
+
+ /* Reduced motion */
+ @media (prefers-reduced-motion: reduce) {
+     html {
+         scroll-behavior: auto;
+     }
+ }

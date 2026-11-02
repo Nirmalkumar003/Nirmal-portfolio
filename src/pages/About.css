@@ -1,0 +1,473 @@
+/* ===== ABOUT SECTION ===== */
+
+.about-page {
+    padding: 75px 0;
+    min-height: 80vh;
+    background: var(--bg-primary);
+}
+
+/* Heading */
+
+.about-heading {
+    margin-bottom: 42px;
+    max-width: 650px;
+}
+
+.about-label {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-heading h1 {
+    color: var(--text-primary);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(36px, 4vw, 48px);
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+}
+
+.about-heading h1 span,
+.about-main h2 span {
+    color: var(--accent);
+}
+
+.about-heading>p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Main Content */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-main {
+    max-width: 700px;
+}
+
+.about-subtitle {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.about-main h2 {
+    color: var(--text-primary);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(25px, 3vw, 32px);
+    line-height: 1.35;
+    margin: 13px 0 20px;
+}
+
+.about-main p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+/* Technology Tags */
+
+.about-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 23px;
+}
+
+.about-tech-tags span {
+    padding: 8px 13px;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Information Card */
+
+.about-info-card {
+    padding: 25px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.about-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.about-card-dot {
+    width: 9px;
+    height: 9px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.about-card-heading h3 {
+    color: var(--text-primary);
+    font-size: 17px;
+    margin: 0;
+}
+
+.about-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-info-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.about-info-item span {
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.about-info-item strong {
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Professional Interests */
+
+.about-focus {
+    margin-top: 75px;
+}
+
+.about-section-heading {
+    margin-bottom: 25px;
+}
+
+.about-section-heading h2 {
+    color: var(--text-primary);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 27px;
+    margin: 8px 0;
+}
+
+.about-section-heading p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Focus Cards */
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.focus-card {
+    padding: 25px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.focus-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.1);
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 19px;
+}
+
+.focus-card h3 {
+    color: var(--text-primary);
+    font-size: 16px;
+    margin-bottom: 11px;
+}
+
+.focus-card p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .about-info-card {
+        max-width: 100%;
+    }
+
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+    .about-page {
+        padding: 55px 0;
+    }
+
+    .about-heading {
+        margin-bottom: 32px;
+    }
+
+    .about-main h2 {
+        font-size: 25px;
+    }
+
+    .about-main p {
+        font-size: 13px;
+    }
+
+    .about-focus {
+        margin-top: 55px;
+    }
+
+    .about-section-heading h2 {
+        font-size: 23px;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info-card,
+    .focus-card {
+        padding: 20px;
+    }
+}
+
+/* Center About Section Heading */
+
+.about-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.about-section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-section-heading p {
+    max-width: 550px;
+    margin: 10px auto 0;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .about-heading {
+        margin-bottom: 35px;
+    }
+}
+
+/* =========================================
+   ABOUT PAGE - PREMIUM ANIMATIONS
+========================================= */
+
+/* Keep the floating background particles visible */
+.about-page {
+    background: transparent;
+}
+
+/* Main heading entrance */
+.about-heading {
+    animation: aboutFadeDown 0.9s ease both;
+}
+
+@keyframes aboutFadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main content entrance */
+.about-main {
+    animation: aboutSlideLeft 1s ease 0.2s both;
+}
+
+@keyframes aboutSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Professional overview card */
+.about-info-card {
+    animation: aboutSlideRight 1s ease 0.35s both;
+    transition: transform 0.35s ease, box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+@keyframes aboutSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.6);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.08);
+}
+
+/* Information rows */
+.about-info-item {
+    transition: padding-left 0.3s ease, border-color 0.3s ease;
+}
+
+.about-info-item:hover {
+    padding-left: 8px;
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+.about-info-item strong {
+    transition: color 0.3s ease;
+}
+
+.about-info-item:hover strong {
+    color: var(--accent);
+}
+
+/* Technology tags */
+.about-tech-tags span {
+    transition: transform 0.3s ease, background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.about-tech-tags span:hover {
+    transform: translateY(-5px);
+    background: rgba(56, 189, 248, 0.16);
+    box-shadow: 0 5px 18px rgba(56, 189, 248, 0.12);
+}
+
+/* Professional interests heading */
+.about-section-heading {
+    animation: aboutFadeDown 0.9s ease both;
+}
+
+/* Focus cards - staggered entrance */
+.focus-card {
+    animation: focusCardReveal 0.8s ease both;
+    transition: transform 0.35s ease, border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.focus-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.focus-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.focus-card:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+@keyframes focusCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.focus-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.1);
+}
+
+/* Number icon glow */
+.focus-icon {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.focus-card:hover .focus-icon {
+    transform: rotate(8deg) scale(1.08);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.2);
+}
+
+/* Card heading hover */
+.focus-card h3 {
+    transition: color 0.3s ease;
+}
+
+.focus-card:hover h3 {
+    color: var(--accent);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    .about-heading,
+    .about-main,
+    .about-info-card,
+    .about-section-heading,
+    .focus-card {
+        animation: none !important;
+        transition: none !important;
+    }
+}

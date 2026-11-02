@@ -1,0 +1,305 @@
+ /* ===== CENTERED EDUCATION TIMELINE ===== */
+
+ .education-timeline {
+     position: relative;
+     max-width: 850px;
+     margin: 0 auto;
+     padding: 0 0 0 35px;
+ }
+
+ .education-timeline-line {
+     position: absolute;
+     left: 7px;
+     top: 10px;
+     bottom: 10px;
+     width: 2px;
+     background: var(--border-color);
+ }
+
+ .education-item {
+     position: relative;
+     margin-bottom: 25px;
+ }
+
+ .education-item:last-child {
+     margin-bottom: 0;
+ }
+
+ .education-dot {
+     position: absolute;
+     left: -35px;
+     top: 27px;
+     width: 16px;
+     height: 16px;
+     border: 4px solid var(--bg-primary);
+     border-radius: 50%;
+     background: var(--accent);
+     box-shadow: 0 0 0 2px var(--accent);
+ }
+
+ /* Education Card */
+
+ .education-card {
+     padding: 28px;
+     background: var(--bg-card);
+     border: 1px solid var(--border-color);
+     border-radius: 12px;
+     transition: border-color 0.3s ease, transform 0.3s ease;
+ }
+
+ .education-card:hover {
+     border-color: var(--accent);
+     transform: translateY(-3px);
+ }
+
+ /* Center the bottom note */
+
+ .education-note {
+     max-width: 850px;
+     margin: 25px auto 0;
+ }
+
+ /* Mobile Responsive */
+
+ @media (max-width: 550px) {
+     .education-page {
+         padding: 55px 0;
+     }
+
+     .education-timeline {
+         padding-left: 27px;
+     }
+
+     .education-timeline-line {
+         left: 5px;
+     }
+
+     .education-dot {
+         left: -27px;
+         width: 14px;
+         height: 14px;
+     }
+
+     .education-card {
+         padding: 20px;
+     }
+
+     .education-note {
+         padding: 14px;
+     }
+ }
+
+ /* Center Education Heading */
+
+ .education-heading {
+     max-width: 700px;
+     margin: 0 auto 45px;
+     text-align: center;
+ }
+
+ .education-heading p {
+     max-width: 550px;
+     margin: 0 auto;
+ }
+
+ /* Mobile */
+ @media (max-width: 550px) {
+     .education-heading {
+         margin-bottom: 35px;
+     }
+ }
+
+ /* =========================================
+   EDUCATION PAGE - PREMIUM ANIMATIONS
+========================================= */
+
+ /* Transparent background to show floating particles */
+ .education-page {
+     background: transparent;
+ }
+
+ /* Heading entrance */
+ .education-heading {
+     animation: educationHeadingReveal 0.9s ease both;
+ }
+
+ @keyframes educationHeadingReveal {
+     from {
+         opacity: 0;
+         transform: translateY(-25px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* Animated timeline line */
+ .education-timeline-line {
+     background: linear-gradient(to bottom,
+             transparent,
+             var(--accent),
+             rgba(56, 189, 248, 0.25),
+             var(--accent),
+             transparent);
+     background-size: 100% 200%;
+     animation: timelineGlow 4s linear infinite;
+ }
+
+ @keyframes timelineGlow {
+     from {
+         background-position: 0% 0%;
+     }
+
+     to {
+         background-position: 0% 100%;
+     }
+ }
+
+ /* Pulsing timeline dots */
+ .education-dot {
+     animation: educationDotPulse 2s ease-in-out infinite;
+ }
+
+ .education-item:nth-child(2) .education-dot {
+     animation-delay: 0.4s;
+ }
+
+ .education-item:nth-child(3) .education-dot {
+     animation-delay: 0.8s;
+ }
+
+ .education-item:nth-child(4) .education-dot {
+     animation-delay: 1.2s;
+ }
+
+ @keyframes educationDotPulse {
+
+     0%,
+     100% {
+         box-shadow:
+             0 0 0 2px var(--accent),
+             0 0 5px rgba(56, 189, 248, 0.2);
+     }
+
+     50% {
+         box-shadow:
+             0 0 0 5px rgba(56, 189, 248, 0.15),
+             0 0 18px rgba(56, 189, 248, 0.65);
+     }
+ }
+
+ /* Education cards entrance */
+ .education-card {
+     animation: educationCardReveal 0.9s ease both;
+     transition:
+         transform 0.35s ease,
+         border-color 0.35s ease,
+         box-shadow 0.35s ease;
+ }
+
+ .education-item:nth-child(1) .education-card {
+     animation-delay: 0.15s;
+ }
+
+ .education-item:nth-child(2) .education-card {
+     animation-delay: 0.35s;
+ }
+
+ .education-item:nth-child(3) .education-card {
+     animation-delay: 0.55s;
+ }
+
+ @keyframes educationCardReveal {
+     from {
+         opacity: 0;
+         transform: translateX(35px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+ /* Card hover glow */
+ .education-card:hover {
+     transform: translateY(-6px);
+     border-color: var(--accent);
+     box-shadow: 0 12px 32px rgba(56, 189, 248, 0.12);
+ }
+
+ /* Year and status badges */
+ .education-year,
+ .education-status {
+     transition:
+         color 0.3s ease,
+         background 0.3s ease,
+         border-color 0.3s ease;
+ }
+
+ .education-card:hover .education-year {
+     color: #7DD3FC;
+ }
+
+ .education-card:hover .education-status {
+     color: #7DD3FC;
+ }
+
+ /* Degree title */
+ .education-card h2 {
+     transition: color 0.3s ease;
+ }
+
+ .education-card:hover h2 {
+     color: var(--accent);
+ }
+
+ /* Score details */
+ .education-details>div {
+     transition:
+         background 0.3s ease,
+         transform 0.3s ease;
+ }
+
+ .education-details>div:hover {
+     transform: translateY(-3px);
+     background: rgba(56, 189, 248, 0.06);
+ }
+
+ /* Bottom note entrance */
+ .education-note {
+     animation: educationNoteReveal 1s ease 0.7s both;
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ @keyframes educationNoteReveal {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .education-note:hover {
+     border-color: rgba(56, 189, 248, 0.5);
+     box-shadow: 0 8px 25px rgba(56, 189, 248, 0.07);
+ }
+
+ /* Respect reduced-motion preferences */
+ @media (prefers-reduced-motion: reduce) {
+
+     .education-heading,
+     .education-timeline-line,
+     .education-dot,
+     .education-card,
+     .education-note {
+         animation: none !important;
+         transition: none !important;
+     }
+ }
